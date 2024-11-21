@@ -22,7 +22,11 @@ header {
   border-radius: 50%;
 }
 
-.hamburger {
+.navigation {
+    
+}
+
+#hamburger {
   height: 26px;
   width: 26px;
 }
@@ -54,6 +58,10 @@ section {
   border: 2px solid black;
 }
 
+.squareImg {
+    width: 100%;
+}
+
 .button {
   display: flex;
   width: 150px;
@@ -79,4 +87,8 @@ section {
 footer {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 426px) { 
+    
 }
