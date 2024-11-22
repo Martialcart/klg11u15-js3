@@ -31,6 +31,13 @@ header {
   width: 26px;
 }
 
+.rotate {
+    animation: rotate;
+}
+
+@keyframes rotate {
+}
+
 ul {
   display: flex;
   justify-content: end;

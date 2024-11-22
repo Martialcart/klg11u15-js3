@@ -1,3 +1,17 @@
+//oblig hamburger meny
+
+const hamburger = document.querySelector("#hamburger")
+const menu = document.querySelector("#menu")
+console.log(hamburger, menu);
+
+hamburger.addEventListener("click", function () {
+    console.log("hamburger funker");
+    menu.classList.toggle("hidden");
+    this.classList.toggle("rotate");
+
+
+});
+
 const squareGreenButton = document.querySelector('#squareGreenButton')
 console.log(squareGreenButton);
 
