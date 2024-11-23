@@ -3,6 +3,7 @@
     "start": "servor --reload"
   },
   "dependencies": {
+    "live-server": "^1.2.2",
     "servor": "^4.0.2"
   }
 }

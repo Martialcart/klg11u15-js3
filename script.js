@@ -1,4 +1,6 @@
-//oblig hamburger meny
+//oblig
+
+//hamburger meny
 
 const hamburger = document.querySelector("#hamburger")
 const menu = document.querySelector("#menu")
@@ -8,8 +10,18 @@ hamburger.addEventListener("click", function () {
     console.log("hamburger funker");
     menu.classList.toggle("hidden");
     this.classList.toggle("rotate");
+}); 
 
-
+const phoneWidth = 426;
+window.addEventListener("resize", function() {
+    console.log("windows resize");
+    if(window.innerWidth < phoneWidth) {
+	hamburger.classList.remove("hidden");
+	menu.classList.add("hidden");
+    } else {
+	hamburger.classList.add("hidden");
+	menu.classList.remove("hidden");
+    }
 });
 
 const squareGreenButton = document.querySelector('#squareGreenButton')

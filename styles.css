@@ -22,8 +22,9 @@ header {
   border-radius: 50%;
 }
 
-.navigation {
-    
+#navigation {
+    display:flex;
+    flex-direction: column;
 }
 
 #hamburger {
@@ -32,10 +33,7 @@ header {
 }
 
 .rotate {
-    animation: rotate;
-}
-
-@keyframes rotate {
+    transform: rotate(90deg);
 }
 
 ul {
@@ -97,5 +95,12 @@ footer {
 }
 
 @media (max-width: 426px) { 
-    
+    /* HEADER */
+    ul {
+	flex-direction: column;
+    }
+
+ 
+
 }
+    
