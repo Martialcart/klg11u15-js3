@@ -6,23 +6,54 @@ const hamburger = document.querySelector("#hamburger")
 const menu = document.querySelector("#menu")
 console.log(hamburger, menu);
 
+/**
+ * click on hamburger: rotates hamburger and shows menu
+ */
 hamburger.addEventListener("click", function () {
     console.log("hamburger funker");
     menu.classList.toggle("hidden");
     this.classList.toggle("rotate");
-}); 
+});  
 
+//sets limit for showing phone screen
 const phoneWidth = 426;
+
+/**
+ * activates screen mode check when page has loaded
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("page loaded");
+    widthSetScreenMode(); 
+});
+
+/**
+ * activates screen mode check when page width has changed
+ */
 window.addEventListener("resize", function() {
     console.log("windows resize");
+    widthSetScreenMode(); 
+});
+
+/**
+ * checks window size then sets screen mode
+ */
+function widthSetScreenMode () {
     if(window.innerWidth < phoneWidth) {
-	hamburger.classList.remove("hidden");
-	menu.classList.add("hidden");
+	phoneScreen();
     } else {
+	pcScreen();
+    }
+}
+
+function pcScreen() {
 	hamburger.classList.add("hidden");
 	menu.classList.remove("hidden");
-    }
-});
+}
+
+function phoneScreen() {
+	hamburger.classList.remove("hidden");
+	menu.classList.add("hidden");
+}
 
 const squareGreenButton = document.querySelector('#squareGreenButton')
 console.log(squareGreenButton);
